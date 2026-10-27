@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-python@v7 # v7.1.0
         with:
           python-version: "3.12"
-      - uses: astral-sh/setup-uv@v10 # v10.3.2
+      - uses: astral-sh/setup-uv@v10.3.2 # 메이저 태그(v10)가 없어 정확한 버전으로 고정
         with:
           enable-cache: false
       - name: Install dev extras (uv → setup-python 의 인터프리터)
@@ -70,7 +70,7 @@ jobs:
       - uses: actions/setup-python@v7 # v7.1.0
         with:
           python-version: "3.12"
-      - uses: astral-sh/setup-uv@v10 # v10.3.2
+      - uses: astral-sh/setup-uv@v10.3.2 # 메이저 태그(v10)가 없어 정확한 버전으로 고정
         with:
           enable-cache: false
       - name: uv build (sdist + wheel)

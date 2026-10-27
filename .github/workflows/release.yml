@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7 # v7.0.1
-      - uses: astral-sh/setup-uv@v10 # v10.3.2
+      - uses: astral-sh/setup-uv@v10.3.2 # 메이저 태그(v10)가 없어 정확한 버전으로 고정
         with:
           enable-cache: false
       - name: Tag must equal v<__version__>; server.json / README must agree
