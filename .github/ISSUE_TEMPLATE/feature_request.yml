@@ -1,0 +1,54 @@
+name: 기능 제안
+description: 새 도구나 동작 변경을 제안합니다.
+title: "[제안] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        이 프로젝트의 범위는 "내 블로그를 위한 AI 글쓰기 보조 — 공개는 사람이 검토한 뒤" 입니다.
+        대량·자동 발행, 검색엔진 조작, 본인 소유가 아닌 블로그 조작을 돕는 기능은 받지 않습니다.
+  - type: textarea
+    id: problem
+    attributes:
+      label: 어떤 불편이 있나요?
+      description: 지금 어떤 상황에서 무엇이 불편한지, 어떻게 우회하고 있는지 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 제안하는 동작
+      description: 새 도구라면 이름·입력·출력 예시, 기존 도구 변경이라면 어떤 기본값/옵션인지 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 고려한 대안
+  - type: dropdown
+    id: area
+    attributes:
+      label: 관련 영역
+      options:
+        - 글 발행·수정·삭제
+        - 마크다운 → HTML 변환 / 서식
+        - 이미지 업로드
+        - 초안·자동저장
+        - 로그인·세션 저장
+        - 안전장치 (비공개 기본·레이트리밋·호스트 제한)
+        - CLI / 설치 / 클라이언트 설정
+        - 문서
+        - 기타
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 확인
+      options:
+        - label: 대량 발행·검색엔진 조작·타인 블로그 조작을 위한 제안이 아닙니다
+          required: true
+        - label: 쿠키·세션 파일·HAR를 첨부하지 않았습니다
+          required: true
+        - label: 비슷한 이슈나 Discussions 가 이미 있는지 찾아봤습니다

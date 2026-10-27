@@ -1,0 +1,14 @@
+{
+  "name": "tistory",
+  "displayName": "Tistory (unofficial)",
+  "version": "0.2.0",
+  "description": "내 티스토리 블로그를 위한 AI 글쓰기 보조 — 비공개 발행·수정·초안·이미지 업로드. uvx 로 PyPI 패키지 tistory-mcp 를 실행합니다.",
+  "author": {
+    "name": "jangsejong",
+    "url": "https://github.com/jangsejong"
+  },
+  "homepage": "https://github.com/jangsejong/tistory-mcp",
+  "repository": "https://github.com/jangsejong/tistory-mcp",
+  "license": "MIT",
+  "keywords": ["tistory", "blog", "mcp", "korean"]
+}

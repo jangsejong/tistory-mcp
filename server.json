@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jangsejong/tistory-mcp",
+  "title": "Tistory MCP (Unofficial)",
+  "description": "Unofficial MCP server for Tistory blogs: publish, edit, drafts, images. Private by default.",
+  "version": "0.2.0",
+  "websiteUrl": "https://github.com/jangsejong/tistory-mcp",
+  "repository": {
+    "url": "https://github.com/jangsejong/tistory-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "tistory-mcp",
+      "version": "0.2.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "TISTORY_MCP_SESSION_STORE",
+          "description": "Where the blog session cookies are kept: a 0600 file under the config directory, or the OS keyring.",
+          "default": "file",
+          "choices": ["file", "keyring"]
+        },
+        {
+          "name": "TISTORY_MCP_MIN_INTERVAL_SEC",
+          "description": "Minimum number of seconds between publish/update calls. 0 disables the interval.",
+          "format": "number",
+          "default": "60"
+        },
+        {
+          "name": "TISTORY_MCP_DAILY_CAP",
+          "description": "Maximum number of publish/update calls per day. 0 disables the cap.",
+          "format": "number",
+          "default": "20"
+        },
+        {
+          "name": "TISTORY_MCP_ALLOW_ANY_HOST",
+          "description": "Set to 1 to allow blog hosts outside *.tistory.com (custom domains). Unset by default: only *.tistory.com is accepted.",
+          "placeholder": "1"
+        }
+      ]
+    }
+  ]
+}

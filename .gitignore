@@ -1,0 +1,39 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# AI-assistant instruction files stay local and are never published
+CLAUDE.md
+**/CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# Session material — real cookies live only in ~/.config/tistory-mcp/ (0600)
+sessions/
+*.session.json
+storage_state*.json
+*.har
+.env
+
+# Argument files for scripts/mcp_call.py may contain unpublished drafts
+args.json
+*.args.json
+
+# Machine-specific client config (see .mcp.json.example)
+/.mcp.json

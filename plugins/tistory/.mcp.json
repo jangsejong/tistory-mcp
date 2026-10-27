@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tistory": {
+      "command": "uvx",
+      "args": ["tistory-mcp"]
+    }
+  }
+}

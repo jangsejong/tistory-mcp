@@ -1,0 +1,85 @@
+[project]
+name = "tistory-mcp"
+dynamic = ["version"]
+description = "Unofficial MCP server for Tistory (티스토리) blogs — write, publish and manage posts from Claude, Cursor, VS Code and other MCP clients"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "jangsejong" }]
+keywords = [
+    "tistory",
+    "티스토리",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "claude-code",
+    "cursor",
+    "blog",
+    "blogging",
+    "kakao",
+    "korean",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: Korean",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = [
+    "mcp>=2.2,<3",
+    "httpx>=0.28,<1",
+    "playwright>=1.60",
+    "markdown-it-py>=3.0,<5",
+    "nh3>=0.3",
+    "beautifulsoup4>=4.12",
+    "pydantic>=2,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+keyring = ["keyring>=25"]
+
+[project.urls]
+Homepage = "https://github.com/jangsejong/tistory-mcp"
+Repository = "https://github.com/jangsejong/tistory-mcp"
+Issues = "https://github.com/jangsejong/tistory-mcp/issues"
+Changelog = "https://github.com/jangsejong/tistory-mcp#changelog"
+
+[project.scripts]
+tistory-mcp = "tistory_mcp.server:main"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/tistory_mcp/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tistory_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "scripts", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

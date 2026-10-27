@@ -1,0 +1,17 @@
+{
+  "name": "tistory-mcp",
+  "description": "티스토리(Tistory) 블로그용 비공식 MCP 서버 — Claude Code 플러그인",
+  "owner": {
+    "name": "jangsejong",
+    "url": "https://github.com/jangsejong"
+  },
+  "plugins": [
+    {
+      "name": "tistory",
+      "source": "./plugins/tistory",
+      "description": "내 티스토리 블로그를 위한 AI 글쓰기 보조 — 비공개 발행·수정·초안·이미지 업로드 (uvx tistory-mcp)",
+      "category": "productivity",
+      "tags": ["tistory", "blog", "mcp", "korean"]
+    }
+  ]
+}

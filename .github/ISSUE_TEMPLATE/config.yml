@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 질문 · 사용법 · 아이디어 (Discussions)
+    url: https://github.com/jangsejong/tistory-mcp/discussions
+    about: 버그가 아닌 질문, 사용 팁, 가벼운 제안은 Discussions 에 올려 주세요.
+  - name: 보안 취약점 신고 (비공개)
+    url: https://github.com/jangsejong/tistory-mcp/security/advisories/new
+    about: 쿠키 노출 · HTML 정화 우회 · SSRF 같은 보안 문제는 공개 이슈 대신 여기로. 자세한 기준은 SECURITY.md 를 보세요.
