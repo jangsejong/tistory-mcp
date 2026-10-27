@@ -62,7 +62,7 @@ Default flow: write → publish as a **private** draft → read it in Tistory �
 
    > connect my Tistory blog myblog.tistory.com
 
-   A browser window opens. Finish the Kakao login and approve the KakaoTalk push. Cookies are saved under `~/.config/tistory-mcp/sessions/` (mode 0600) and the session lasts days to weeks.
+   A browser window opens. Finish the Kakao login and approve the KakaoTalk push. Cookies are saved under `~/.config/tistory-mcp/sessions/` (mode 0600). The session can be short — in testing it expired after about an hour; log in again when a tool says so.
 
 If no browser window can appear (WSL, SSH, containers) or the client times out during login, log in from a terminal instead:
 
@@ -110,7 +110,7 @@ CLI: `tistory-mcp` (no arguments) runs the stdio server; `tistory-mcp --version`
 
 - Unofficial. It can stop working whenever Tistory changes its internal API.
 - Using it may conflict with the Tistory/Kakao terms of service. Any account risk is yours.
-- Fully unattended operation is impossible by design (KakaoTalk push approval). Sessions expire after days to weeks; log in again when a tool says so.
+- Fully unattended operation is impossible by design (KakaoTalk push approval). Sessions can expire after as little as an hour or so; log in again when a tool says so.
 - No telemetry. Cookies never leave your machine except in requests to Tistory.
 - All 11 tools were verified on a real blog (2026-10-27, with private test posts that were deleted afterwards) — see the verification table in the Korean README.
 

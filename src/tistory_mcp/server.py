@@ -199,7 +199,7 @@ async def tistory_session_init(
     Blocks until the user finishes or timeout_sec passes — tell the user to look for the browser
     window and approve the KakaoTalk push before calling. The KakaoTalk 2-factor approval cannot
     be automated. Once saved, other tools work without a browser until the session expires
-    (days to weeks); call again when a tool reports an expired session.
+    (it can be as short as an hour or so); call again when a tool reports an expired session.
     """
     host = _host(blog_url)
     cfg = settings()
