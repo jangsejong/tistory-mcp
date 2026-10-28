@@ -37,3 +37,6 @@ args.json
 
 # Machine-specific client config (see .mcp.json.example)
 /.mcp.json
+
+# Local-only notes and legacy material (never published)
+/_private/
